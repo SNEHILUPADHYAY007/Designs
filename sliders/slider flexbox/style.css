@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+section{
+    position: absolute;
+    width:100%;
+    height: 100vh;
+    display: flex;
+    border: 2px solid #000;
+}
+
+section .slide{
+    position: relative;
+    height: 100%;
+    flex: 1;
+    border-right: 2px solid #000;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+section .slide:hover{
+    flex-grow: 5;
+}
+
+section .slide:nth-child(1){
+    height: 100%;
+    width:100%;
+    background-image: url(images/the-dark-knight-wallpaper.jpg);
+    background-position: center center;
+}
+
+section .slide:nth-child(2){
+    background: url(images/madagascar.jpg);
+    background-position: center center;
+}
+
+section .slide:nth-child(3){
+    background: url(images/spiderman.jpg);
+    background-position: center center;
+}
+
+section .slide:nth-child(4){
+    background: url(images/transformers.jpg);
+        
+    background-position: center center;
+}
+
+section .slide:nth-child(5){
+    background:url(images/535226.jpg);
+        
+    background-position: center center;
+}
+
+section .slide:last-child{
+    border-right: none;
+}
+
+section .slide .content{
+    position: absolute;
+    bottom:0;
+    margin: 40px;
+    padding:30px;
+    background: #000;
+    color:#fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0s;
+    transform: translateY(100px);
+}
+
+section .slide:hover .content{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
+
+
